@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import sklearn
 import numpy as np
 import pydeck as pdk
 import base64
