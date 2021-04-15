@@ -1,0 +1,21 @@
+,SpecialServiceType,SpecialServiceType_num
+0,None,0
+1,Assist other agencies,1
+2,Lift Release,2
+3,Making Safe (not RTC),3
+4,Spills and Leaks (not RTC),4
+5,RTC,5
+6,Advice Only,6
+7,Flooding,7
+8,Medical Incident,8
+9,Effecting entry/exit,9
+10,No action (not false alarm),10
+11,Animal assistance incidents,11
+12,Hazardous Materials incident,12
+13,Suicide/attempts,13
+14,Evacuation (no fire),14
+15,Other Transport incident,15
+16,Other rescue/release of persons,16
+17,Rescue or evacuation from water,17
+18,Removal of objects from people,18
+19,Stand By,19
