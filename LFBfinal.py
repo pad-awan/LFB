@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pydeck as pdk
 import base64
+import sklearn
 import streamlit.components.v1 as components
 st.set_page_config(layout="wide")
 st.title('London Fire Brigade - Arrival Time Estimator')
