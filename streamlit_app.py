@@ -441,11 +441,11 @@ if submit:
     y_pred = clf.score(X_test,y_test)
     
     # display the classifier
-    st.write(f"regressor ={classifier_name}")
+    st.write(f"regressor model={classifier_name}")
     
     # display score of the regression model
-    st.write(f"prediction score = {y_pred}")
-    
+    st.write(f"the prediction score = {y_pred}")
+    st.write("the more the score is closed to 1, the best prediction score is")
     # delete target column from num_data_pred into feats_demo
     feats_demo = num_data_pred.drop(['FirstPumpArriving_AttendanceTime'], axis=1)
     # prediction with trained model
@@ -478,7 +478,9 @@ if submit:
     tps_seconds = tps_estimated % 60
     # preparing result message
     #success_message = 'Estimated LFB arrival time : ' + str(tps_estimated) + ' seconds.'
-    success_message = 'Estimated LFB arrival time : ' + str(tps_minutes) + ' minutes ' + str(tps_seconds) + ' seconds.'
+    success_message = 'Estimated LFB arrival time : ' + str(tps_minutes) + ' minutes ' + str(tps_seconds) + \
+        ' seconds at ' + str(num_heure) + \
+        'h on weekday number ' + str(num_wd)
     
     
     # Estimated LFB arrival time display
