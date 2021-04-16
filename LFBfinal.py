@@ -125,7 +125,7 @@ df_sqid = pd.read_csv('df_sqid_2019.csv', index_col=0)
 def user_input():
     hourofcall = st.sidebar.slider('Hour of Call', 0, 23, 12)
     weekday = st.sidebar.select_slider('Weekday', options=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
-    incidentgroup = st.sidebar.radio('Incident Group', ('Fire', 'False Alarm', 'Special Service'))
+    incidentgroup = st.sidebar.radio('Incident Group', ('Fire', 'Special Service'))
     sst_sel= st.sidebar.selectbox('Special Service Type', liste_sst)
     codeid_description= st.sidebar.selectbox('DelayCode Description', liste_delaycodeid)
     quartier= st.sidebar.selectbox('Borough Name', liste_qu)
