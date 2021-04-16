@@ -104,7 +104,7 @@ welc =st.markdown(
 )
 
 
-classifier_name = st.sidebar.selectbox("Select model :", 
+classifier_name = st.sidebar.selectbox("Select your model :", 
                                        ("LinearRegression","GradientBoostingRegressor","SGDRegressor","RandomForestRegressor"))
 
 #####data cleaning
@@ -127,9 +127,9 @@ df_sqid = pd.read_csv('df_sqid_2019.csv', index_col=0)
 
 
 # Borouh names and Ward names load
-df_qsq = pd.read_csv('df_qsq_2019.csv', index_col=0
+df_qsq = pd.read_csv('df_qsq_2019.csv', index_col=0)
 # Borough Names and Ward names sort
-df_qsq = df_qsq.sort_values(['ProperCase','IncGeo_WardName'], ascending = True)
+df_qsq = df_qsq.sort_values(by=['ProperCase','IncGeo_WardName'], ascending = True)
 
 # Incident group load
 df_ig = pd.read_csv('df_ig_2019.csv', index_col=0)
@@ -208,26 +208,12 @@ df = user_input()
 
 
 
-
-
-
-
-
-
 # GPS borough points load
 
 def upload_gps():
     gps = pd.read_csv('gpsfinal.csv', index_col=0, sep=";")
     return gps
 gps = upload_gps()
-
-
-
-
-
-
-
-
 
 
 
@@ -294,15 +280,12 @@ def get_classifier(clf_name):
     if clf_name=="LinearRegression":
         clf = LinearRegression(n_jobs=15,normalize=True)
     elif clf_name =="GradientBoostingRegressor":
-        clf = SGDRegressor()
-    elif clf_name =="SGDRegressor":
         clf = GradientBoostingRegressor(n_estimators=15)
+    elif clf_name =="SGDRegressor":
+        clf = SGDRegressor()
     elif clf_name =="RandomForestRegressor":
         clf = RandomForestRegressor(n_estimators=15,criterion="mse")
     return clf
-
-
-
 
 
 
@@ -461,7 +444,7 @@ if submit:
     st.write(f"regressor ={classifier_name}")
     
     # display score of the regression model
-    st.write(f"score = {y_pred}")
+    st.write(f"prediction score = {y_pred}")
     
     # delete target column from num_data_pred into feats_demo
     feats_demo = num_data_pred.drop(['FirstPumpArriving_AttendanceTime'], axis=1)
