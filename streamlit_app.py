@@ -88,7 +88,7 @@ welc =st.markdown(
             based on the factors chosen.
         <br>
         <br>
-            <b>Please select your settings</b>
+            <b><<<<<<<<<<<-----Please select your settings on the left column</b>
         <br><br><br><br>
             <a href="https://smallpdf.com/shared#st=97bb4f3d-f30a-4c2f-9aaf-037ecc233065&fn=README.pdf&ct=1617856336952&tl=share-document&rf=link/" target="_blank">
                 <font size=2.9>
@@ -164,8 +164,6 @@ for quartier in df_cas_quart.ProperCase.unique():
 #-------------------------------------------------------
 #		Zone de déclaration des modules ou des fonctions
 #-------------------------------------------------------
-
-
 
 
 
@@ -249,7 +247,6 @@ for nsq in num_sous_quartier:
 
 
 
-
 # parameters by user
 # def add_parameter_ui(clf_name):
 #     params =dict()
@@ -295,8 +292,6 @@ def get_classifier(clf_name):
 #-------------------------------------------------------
 #						PROGRAMME
 #-------------------------------------------------------
-
-
 
 
 
@@ -441,11 +436,11 @@ if submit:
     y_pred = clf.score(X_test,y_test)
     
     # display the classifier
-    st.write(f"regressor model={classifier_name}")
+    st.write(f"Regressor model={classifier_name}")
     
     # display score of the regression model
-    st.write(f"the prediction score = {y_pred}")
-    st.write("the more the score is closed to 1, the best prediction score is")
+    st.write(f"The prediction score = {y_pred}")
+    st.write("The best prediction score is equal to 1")
     # delete target column from num_data_pred into feats_demo
     feats_demo = num_data_pred.drop(['FirstPumpArriving_AttendanceTime'], axis=1)
     # prediction with trained model
@@ -520,8 +515,8 @@ if submit:
                     'ColumnLayer',
                     data=mapgps,
                     get_position='[lon, lat]',
-                    get_elevation='[temps]',
-                    radius=500,
+                    get_elevation='[temps/2]',
+                    radius=450,
                     auto_highlight=True,
                     elevation_scale=50,
                     elevation_range=[0, 100],
